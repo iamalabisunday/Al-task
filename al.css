@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #202124;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-video {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3c4043;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-video-placeholder {
+  width: 100%;
+  height: 100%;
+  max-width: 1280px;
+  max-height: 720px;
+  background-color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border-radius: 8px;
+}
+
+.participants {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #282a2d;
+  overflow-x: auto;
+}
+
+.participant {
+  min-width: 120px;
+  height: 90px;
+  background-color: #666;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #202124;
+}
+
+.control-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #3c4043;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.control-btn:hover {
+  background-color: #4a4d51;
+}
+
+.end-call {
+  background-color: #ea4335;
+}
+
+.end-call:hover {
+  background-color: #ff5c5c;
+}
+
+.meeting-info {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .main-video-placeholder {
+    font-size: 18px;
+  }
+
+  .participant {
+    min-width: 80px;
+    height: 60px;
+    font-size: 12px;
+  }
+
+  .control-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .meeting-info {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-video-placeholder {
+    font-size: 16px;
+  }
+
+  .participants {
+    padding: 5px;
+  }
+
+  .participant {
+    min-width: 60px;
+    height: 45px;
+    font-size: 10px;
+  }
+
+  .controls {
+    padding: 10px;
+  }
+
+  .control-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+    margin: 3px;
+  }
+
+  .meeting-info {
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    font-size: 10px;
+  }
+}
